@@ -11,6 +11,7 @@ body{
 }
 
 
+
 h1, h2, h3{
   font-family: 'Montserrat', sans-serif;
 }
@@ -25,19 +26,26 @@ h1{
   width: 500px;
   margin: 30px auto;
 }
-.cardbottom, .card{
+.cardnew, .cardbottom, .card{
   background: white;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 4px;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 
+
 }
 
-.cardbottom{
+
+
+
+.cardnew, .cardbottom{
    text-align: center;
+   justify-content:center;
+
 
 }
+
 
 .cardbottom a{
   color: #DD5555;
@@ -57,22 +65,16 @@ a:hover{
   text-decoration: none;
 }
 
-.details{
-
-  background-color:  #dae5ee;
-  box-shadow: 1px 1px 2px grey;
-  padding: 20px;
-  margin-right: 70%;
-
-}
-
 
 
 .button{
-  background-color:  #f5f6f7 ;
+  color: #DD5555;
+  font-size: 22px;
   box-shadow: 1px 1px 2px grey;
   padding: 10px;
-  margin-right: 70%
+  text-align: center;
+  justify-content:center;
+  inline-size: -moz-available;
 
 
 }

@@ -1,17 +1,24 @@
-<h1>EDIT</h1>
+<body>
+  <div class="container">
 
-<%= form_for(@task) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.submit %>
-  <%= f.check_box :completed %>
-<% end %>
+    <h1>EDIT</h1>
 
+    <div class="card">
+    <%= form_for(@task) do |f| %>
+      <p><%= f.label :name %></p>
+      <p><%= f.text_field :title %></p>
+      <p><%= f.label :details %></p>
+      <p><%= f.text_field :details %></p>
+      <p>Completed: <%= f.check_box :completed %></p>
+     </div>
+      <div class="cardbottom">
+      <p><%= f.submit :class => "button" %></p>
 
+    <% end %>
+      </div>
 
-<a href="/tasks">
-       <strong>Back to menu</strong>
-</a>
-
+    <div class="cardbottom">
+    <p><%=link_to "Back to index", tasks_path %></p>
+    </div>
+  </div>
+</body>

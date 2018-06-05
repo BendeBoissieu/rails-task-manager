@@ -1,23 +1,34 @@
+<body>
 
-<h1><%= @task.title %></h1>
-<div class="details">
-<h2><%= @task.details %></h2>
-</div>
+  <div class="container">
 
+    <h1><%= @task.title %></h1>
 
-   <% if @task.completed == true %>
+    <div class="card">
+    <h2><%= @task.details %></h2>
+    </div>
 
-      <p><input type="checkbox" id="completed" name="completed" value="completed" checked>
-      This task is completed</p>
+    <div class="cardbottom">
+       <% if @task.completed == true %>
 
-  <% else %>
-    <p><input type="checkbox" id="completed" name="completed" value="completed" uncheked>
-     This task is not completed </p>
+          <p><input type="checkbox" id="completed" name="completed" value="completed" checked>
+          This task is completed</p>
 
-  <% end%>
+      <% else %>
+        <p><input type="checkbox" id="completed" name="completed" value="completed" uncheked>
+         This task is not completed </p>
 
-<p><%=link_to "Edit", edit_task_path %></p>
+      <% end%>
+    </div>
 
-<%= link_to "Delete", task_path(@task),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
+    <div class="cardbottom">
+
+    <p><%=link_to "Edit", edit_task_path %></p>
+
+    <%= link_to "Delete", task_path(@task),
+          method: :delete,
+          data: { confirm: "Are you sure?" } %>
+    <p><%=link_to "Back to index", tasks_path %></p>
+    </div>
+    </div>
+</body>
