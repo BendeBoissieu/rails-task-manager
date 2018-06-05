@@ -1,0 +1,31 @@
+<h1>New Task</h1>
+
+<div class="details">
+
+<%=form_for(@task) do |f|%>
+<%=f.label :name%>
+<%=f.text_field :title%>
+<%=f.label :details%>
+<%=f.text_field :details%>
+<%=f.submit%>
+<%end%>
+
+
+
+
+
+
+</div>
+
+<!-- <form action="/tasks" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="title">Name: </label>
+  <input type="text" name="task[title]" id="title">
+
+  <label for="details">Details: </label>
+  <input type="text" name="task[details]" id="details">
+</div>
+<div class="button">
+
+  <input type="submit" name="create task" id="create" value="Create task">
+</form> -->
